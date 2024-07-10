@@ -1,0 +1,449 @@
+﻿@* Generator: Template TypeVisibility: Internal GeneratePrettyNames: True *@
+@using System.Collections
+@using System.Collections.Generic
+@using Hangfire.Dashboard
+@using Hangfire.Dashboard.Pages
+@using Hangfire.Dashboard.Resources
+@inherits RazorPage
+@{
+    Layout = new LayoutPage(Hangfire.HttpJob.Content.resx.Strings.AddCronButtonName);
+}
+
+<style>
+    body {
+        width: 50%;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+
+    input[type=number] {
+        height: 25px;
+        width: 52px;
+    }
+
+    .search-field input[type=text] {
+        width: 152px !important;
+    }
+</style>
+<div>
+    <div style="text-align: center;">
+        <h3>@Hangfire.HttpJob.Content.resx.Strings.AddCronButtonName</h3>
+        <br>
+    </div>
+    <div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            @*<li role="presentation" class="active">
+                <a href="#second" aria-controls="second" role="tab" data-toggle="tab">秒</a>
+            </li>*@
+            <li role="presentation" class="active">
+                <a href="#minute" aria-controls="minute" role="tab" data-toggle="tab">@Hangfire.HttpJob.Content.resx.Strings.Minutes</a>
+            </li>
+            <li role="presentation">
+                <a href="#hour" aria-controls="hour" role="tab" data-toggle="tab">@Hangfire.HttpJob.Content.resx.Strings.Hours</a>
+            </li>
+            <li role="presentation">
+                <a href="#day" aria-controls="day" role="tab" data-toggle="tab">@Hangfire.HttpJob.Content.resx.Strings.Days</a>
+            </li>
+            <li role="presentation">
+                <a href="#month" aria-controls="month" role="tab" data-toggle="tab">@Hangfire.HttpJob.Content.resx.Strings.Months</a>
+            </li>
+            <li role="presentation">
+                <a href="#week" aria-controls="week" role="tab" data-toggle="tab">@Hangfire.HttpJob.Content.resx.Strings.Weekday</a>
+            </li>
+            @*<li role="presentation">
+                <a href="#year" aria-controls="year" role="tab" data-toggle="tab">年</a>
+            </li>*@
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+
+            <!--秒-->
+            @*<div role="tabpanel" class="tab-pane active" id="second">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="secondType" value="All" checked="checked">
+                        每秒 允许的通配符[, - * /]
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="secondType" value="Cyclic">
+                        周期从
+                        <input type="number" maxlength="2" id="secondTypeCyclic_1" value="">
+                        -
+                        <input type="number" id="secondTypeCyclic_2" value="">
+                        秒
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="secondType" value="Interval">
+                        从
+                        <input type="number" id="secondTypeInterval_1" value="">
+                        秒开始,每
+                        <input type="number" id="secondTypeInterval_2" value="">
+                        秒执行一次
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="secondType" value="Assigned">
+                        指定
+                    </label>
+                </div>
+                <div style="margin-left: 20px;">
+                    <select id="secondTypeAssigned_1" data-placeholder="选择指定的秒..."
+                            style="width:350px;" multiple></select>
+                </div>
+            </div>*@
+
+            <!--分钟-->
+            <div role="tabpanel" class="tab-pane active" id="minute">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="minuteType" value="All" checked="checked">
+                        @Hangfire.HttpJob.Content.resx.Strings.EveryMinute
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="minuteType" value="Cyclic">
+                        @Hangfire.HttpJob.Content.resx.Strings.EveryMinuteBetweenMinute
+                        <input type="number" id="minuteTypeCyclic_1" value="">
+                        -
+                        <input type="number" id="minuteTypeCyclic_2" value="">
+                        @Hangfire.HttpJob.Content.resx.Strings.Minutes
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="minuteType" value="Interval">
+                        @Hangfire.HttpJob.Content.resx.Strings.StartingAtMinute
+                        <input type="number" id="minuteTypeInterval_1" value="">
+                        @Hangfire.HttpJob.Content.resx.Strings.StartingAtMinute2
+                        <input type="number" id="minuteTypeInterval_2" value="">
+                        @Hangfire.HttpJob.Content.resx.Strings.Minutess
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="minuteType" value="Assigned">
+                        @Hangfire.HttpJob.Content.resx.Strings.SpecificMinute
+                    </label>
+                </div>
+              
+                <div style="margin-left: 20px;">
+                    <select id="minuteTypeAssigned_1" data-placeholder="@Hangfire.HttpJob.Content.resx.Strings.Choose"
+                            style="width:350px;" multiple></select>
+                </div>
+                
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="minuteType" value="NotAssigned">
+                        @Hangfire.HttpJob.Content.resx.Strings.NoSpecific
+                    </label>
+                </div>
+            </div>
+
+            <!--小时-->
+            <div role="tabpanel" class="tab-pane" id="hour">
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="hourType" value="All" checked="checked">
+                        @Hangfire.HttpJob.Content.resx.Strings.EveryHour
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="hourType" value="Cyclic">
+                        @Hangfire.HttpJob.Content.resx.Strings.EveryHourBetweenHour
+                        <input type="number" id="hourTypeCyclic_1" value="">
+                        -
+                        <input type="number" id="hourTypeCyclic_2" value="">
+                        @Hangfire.HttpJob.Content.resx.Strings.Hours
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="hourType" value="Interval">
+                        @Hangfire.HttpJob.Content.resx.Strings.StartingAtHour
+                        <input type="number" id="hourTypeInterval_1" value="">
+                        @Hangfire.HttpJob.Content.resx.Strings.StartingAtHour2
+                        <input type="number" id="hourTypeInterval_2" value="">
+                        @Hangfire.HttpJob.Content.resx.Strings.Hourss
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="hourType" value="Assigned">
+                        @Hangfire.HttpJob.Content.resx.Strings.Specific
+                    </label>
+                </div>
+
+                <div style="margin-left: 20px;">
+                    <select id="hourTypeAssigned_1" data-placeholder="@Hangfire.HttpJob.Content.resx.Strings.Choose"
+                            style="width:350px;" multiple></select>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="hourType" value="NotAssigned">
+                        @Hangfire.HttpJob.Content.resx.Strings.NoSpecific
+                    </label>
+                </div>
+            </div>
+
+
+            <!--日-->
+            <div role="tabpanel" class="tab-pane" id="day">
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="dayType" value="All" checked="checked">
+                        @Hangfire.HttpJob.Content.resx.Strings.EveryDay
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="dayType" value="Cyclic">
+                        @Hangfire.HttpJob.Content.resx.Strings.EveryDayBetweenDay
+                        <input type="number" id="dayTypeCyclic_1" value="">
+                        -
+                        <input type="number" id="dayTypeCyclic_2" value="">
+                        @Hangfire.HttpJob.Content.resx.Strings.Days
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="dayType" value="Interval">
+                        @Hangfire.HttpJob.Content.resx.Strings.StartingAtDay
+                        <input type="number" id="dayTypeInterval_1" value="">
+                        @Hangfire.HttpJob.Content.resx.Strings.StartingAtDay2
+                        <input type="number" id="dayTypeInterval_2" value="">
+                        @Hangfire.HttpJob.Content.resx.Strings.Dayss
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="dayType" value="Assigned">
+                        @Hangfire.HttpJob.Content.resx.Strings.Specific
+                    </label>
+                </div>
+                <div style="margin-left: 20px;">
+                    <select id="dayTypeAssigned_1" data-placeholder="@Hangfire.HttpJob.Content.resx.Strings.Choose"
+                            style="width:350px;" multiple></select>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="dayType" value="RecentDays">
+                        @Hangfire.HttpJob.Content.resx.Strings.DayA
+                        <input type="number" id="dayTypeRecentDays_1" value="">
+                        @Hangfire.HttpJob.Content.resx.Strings.DayB
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="dayType" value="LastDayOfMonth">
+                        @Hangfire.HttpJob.Content.resx.Strings.LastDayOfMonth
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="dayType" value="LastDayOfMonthRecentDays">
+                        @Hangfire.HttpJob.Content.resx.Strings.LastWeedDayOfMonth
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="dayType" value="NotAssigned">
+                        @Hangfire.HttpJob.Content.resx.Strings.NoSpecific
+                    </label>
+                </div>
+            </div>
+
+
+            <!--月-->
+            <div role="tabpanel" class="tab-pane" id="month">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="monthType" value="All" checked="checked">
+                        @Hangfire.HttpJob.Content.resx.Strings.EveryMonth
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="monthType" value="Cyclic">
+                        @Hangfire.HttpJob.Content.resx.Strings.EveryMonthBetweenMonth
+                        <input type="number" id="monthTypeCyclic_1" value="">
+                        -
+                        <input type="number" id="monthTypeCyclic_2" value="">
+                        @Hangfire.HttpJob.Content.resx.Strings.Months
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="monthType" value="Interval">
+                        @Hangfire.HttpJob.Content.resx.Strings.StartingAtMonth
+                        <input type="number" id="monthTypeInterval_1" value="">
+                        @Hangfire.HttpJob.Content.resx.Strings.StartingAtMontn2
+                        <input type="number" id="monthTypeInterval_2" value="">
+                        @Hangfire.HttpJob.Content.resx.Strings.Monthss
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="monthType" value="Assigned">
+                        @Hangfire.HttpJob.Content.resx.Strings.Specific
+                    </label>
+                </div>
+                <div style="margin-left: 20px;">
+                    <select id="monthTypeAssigned_1" data-placeholder="@Hangfire.HttpJob.Content.resx.Strings.Choose"
+                            style="width:350px;" multiple></select>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="monthType" value="NotAssigned">
+                        @Hangfire.HttpJob.Content.resx.Strings.NoSpecific
+                    </label>
+                </div>
+            </div>
+
+
+            <!--周-->
+            <div role="tabpanel" class="tab-pane" id="week">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="weekType" value="All" checked="checked">
+                        @Hangfire.HttpJob.Content.resx.Strings.EveryWeekday
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="weekType" value="Cyclic">
+                        @Hangfire.HttpJob.Content.resx.Strings.EveryWeekdayBetweenWeekday
+                        <input type="number" id="weekTypeCyclic_1" value="">
+                        -
+                        <input type="number" id="weekTypeCyclic_2" value="">
+                        @Hangfire.HttpJob.Content.resx.Strings.Weekday
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="weekType" value="WeeksOfWeek">
+                        @Hangfire.HttpJob.Content.resx.Strings.WeekDay1
+                        <input type="number" id="weekTypeWeeksOfWeek_1" value="">
+                        @Hangfire.HttpJob.Content.resx.Strings.WeekDay12
+                        <input type="number" id="weekTypeWeeksOfWeek_2" value="">
+
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="weekType" value="Assigned">
+                        @Hangfire.HttpJob.Content.resx.Strings.Specific
+                    </label>
+                </div>
+                <div style="margin-left: 20px;">
+                    <select id="weekTypeAssigned_1" data-placeholder="@Hangfire.HttpJob.Content.resx.Strings.Choose"
+                            style="width:350px;" multiple></select>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="weekType" value="LastWeekOfMonth">
+                        @Hangfire.HttpJob.Content.resx.Strings.LastWeekdayOfMonth
+                        <input type="number" id="weekTypeLastWeekOfMonth_1" value="1">
+
+                    </label>
+                </div>
+
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="weekType" value="NotAssigned">
+                        @Hangfire.HttpJob.Content.resx.Strings.NoSpecific
+                    </label>
+                </div>
+            </div>
+
+
+            <!--年-->
+            @*<div role="tabpanel" class="tab-pane" id="year">
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="yearType" value="All" checked="checked">
+                        每年 允许的通配符[, - * /]
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="yearType" value="NotAssigned">
+                        不指定
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="yearType" value="Cyclic">
+                        周期从
+                        <input type="number" id="yearTypeCyclic_1" value="2015">
+                        -
+                        <input type="number" id="yearTypeCyclic_2" value="2299">
+                        年
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="yearType" value="Assigned">
+                        指定
+                    </label>
+                </div>
+                <div style="margin-left: 20px;">
+                    <select id="yearTypeAssigned_1" data-placeholder="选择指定的年份..."
+                            style="width:350px;" multiple></select>
+                </div>
+            </div>*@
+
+        </div>
+    </div>
+    <hr>
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title">@Hangfire.HttpJob.Content.resx.Strings.CronResult</h3>
+        </div>
+
+        <div class="panel-body">
+
+            <form class="form-inline">
+                <!--<div class="form-group">
+                    <label class="sr-only">结果</label>
+                    <p class="form-control-static">结果</p>
+                </div>-->
+                <div class="form-group">
+                    <label for="result" class="sr-only">Password</label>
+                    <input type="text" class="form-control" style="width: 500px;" id="result" placeholder="@Hangfire.HttpJob.Content.resx.Strings.CronResult">
+                </div>
+                <button type="button" id="analysis" class="btn btn-default">@Hangfire.HttpJob.Content.resx.Strings.DESCRIBEEXPRESSION</button>
+            </form>
+        </div>
+    </div>
+</div>

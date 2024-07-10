@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddCronButtonName" xml:space="preserve">
+    <value>Cron表达式生成</value>
+  </data>
+  <data name="AddHttpJobButtonName" xml:space="preserve">
+    <value>新增常规作业</value>
+  </data>
+  <data name="AddRecurringJobHttpJobButtonName" xml:space="preserve">
+    <value>新增周期性作业</value>
+  </data>
+  <data name="Choose" xml:space="preserve">
+    <value>选择一个或多个...</value>
+  </data>
+  <data name="CloseButtonName" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="CronResult" xml:space="preserve">
+    <value>结果</value>
+  </data>
+  <data name="DashboardName" xml:space="preserve">
+    <value>JOB管理</value>
+  </data>
+  <data name="DashboardTitle" xml:space="preserve">
+    <value>JOB系统</value>
+  </data>
+  <data name="DayA" xml:space="preserve">
+    <value>每月</value>
+  </data>
+  <data name="DayB" xml:space="preserve">
+    <value>号最近的那个工作日</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>日</value>
+  </data>
+  <data name="Dayss" xml:space="preserve">
+    <value>日执行一次</value>
+  </data>
+  <data name="DESCRIBEEXPRESSION" xml:space="preserve">
+    <value>反解析</value>
+  </data>
+  <data name="EditRecurringJobButtonName" xml:space="preserve">
+    <value>编辑周期任务</value>
+  </data>
+  <data name="Every" xml:space="preserve">
+    <value>每</value>
+  </data>
+  <data name="EveryDay" xml:space="preserve">
+    <value>每天</value>
+  </data>
+  <data name="EveryDayBetweenDay" xml:space="preserve">
+    <value>周期从</value>
+  </data>
+  <data name="EveryHour" xml:space="preserve">
+    <value>每小时</value>
+  </data>
+  <data name="EveryHourBetweenHour" xml:space="preserve">
+    <value>周期从</value>
+  </data>
+  <data name="EveryMinute" xml:space="preserve">
+    <value>每分钟</value>
+  </data>
+  <data name="EveryMinuteBetweenMinute" xml:space="preserve">
+    <value>周期从</value>
+  </data>
+  <data name="EveryMonth" xml:space="preserve">
+    <value>每月</value>
+  </data>
+  <data name="EveryMonthBetweenMonth" xml:space="preserve">
+    <value>周期从</value>
+  </data>
+  <data name="EveryWeekday" xml:space="preserve">
+    <value>每周</value>
+  </data>
+  <data name="EveryWeekdayBetweenWeekday" xml:space="preserve">
+    <value>周期从</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>从</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>小时</value>
+  </data>
+  <data name="Hourss" xml:space="preserve">
+    <value>小时执行一次</value>
+  </data>
+  <data name="JobName" xml:space="preserve">
+    <value>任务名称</value>
+  </data>
+  <data name="JobParam" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="JobResult" xml:space="preserve">
+    <value>执行结果</value>
+  </data>
+  <data name="JobStart" xml:space="preserve">
+    <value>任务开始执行,执行时间</value>
+  </data>
+  <data name="LastDayOfMonth" xml:space="preserve">
+    <value>本月最后一天</value>
+  </data>
+  <data name="LastWeedDayOfMonth" xml:space="preserve">
+    <value>本月最后一个工作日</value>
+  </data>
+  <data name="LastWeekdayOfMonth" xml:space="preserve">
+    <value>本月最后一个星期</value>
+  </data>
+  <data name="LogOutButtonName" xml:space="preserve">
+    <value>JOB配置</value>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>分钟</value>
+  </data>
+  <data name="Minutess" xml:space="preserve">
+    <value>分钟执行一次</value>
+  </data>
+  <data name="Months" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="Monthss" xml:space="preserve">
+    <value>月执行一次</value>
+  </data>
+  <data name="NoSpecific" xml:space="preserve">
+    <value>不指定</value>
+  </data>
+  <data name="PauseJobButtonName" xml:space="preserve">
+    <value>暂停或开始</value>
+  </data>
+  <data name="QueuenName" xml:space="preserve">
+    <value>队列名称</value>
+  </data>
+  <data name="ResponseCode" xml:space="preserve">
+    <value>Http状态码</value>
+  </data>
+  <data name="SearchPlaceholder" xml:space="preserve">
+    <value>输入job名称关键字模糊搜索</value>
+  </data>
+  <data name="Specific" xml:space="preserve">
+    <value>指定</value>
+  </data>
+  <data name="SpecificMinute" xml:space="preserve">
+    <value>指定</value>
+  </data>
+  <data name="StartingAtDay" xml:space="preserve">
+    <value>从</value>
+  </data>
+  <data name="StartingAtDay2" xml:space="preserve">
+    <value>日开始,每</value>
+  </data>
+  <data name="StartingAtHour" xml:space="preserve">
+    <value>从</value>
+  </data>
+  <data name="StartingAtHour2" xml:space="preserve">
+    <value>时开始,每</value>
+  </data>
+  <data name="StartingAtMinute" xml:space="preserve">
+    <value>从</value>
+  </data>
+  <data name="StartingAtMinute2" xml:space="preserve">
+    <value>分钟开始,每</value>
+  </data>
+  <data name="StartingAtMonth" xml:space="preserve">
+    <value>从</value>
+  </data>
+  <data name="StartingAtMontn2" xml:space="preserve">
+    <value>月开始,每</value>
+  </data>
+  <data name="SubmitButtonName" xml:space="preserve">
+    <value>提交</value>
+  </data>
+  <data name="Weekday" xml:space="preserve">
+    <value>周</value>
+  </data>
+  <data name="WeekDay1" xml:space="preserve">
+    <value>第</value>
+  </data>
+  <data name="WeekDay12" xml:space="preserve">
+    <value>周 的星期</value>
+  </data>
+  <data name="JobEnd" xml:space="preserve">
+    <value>任务结束</value>
+  </data>
+  <data name="StartBackgroudJobButtonName" xml:space="preserve">
+    <value>带参数运行</value>
+  </data>
+  <data name="StopBackgroudJobButtonName" xml:space="preserve">
+    <value>停止</value>
+  </data>
+  <data name="AgentJobDeatilButton" xml:space="preserve">
+    <value>查询状态</value>
+  </data>
+  <data name="MultiBackgroundJobFailToContinue" xml:space="preserve">
+    <value>子任务不能执行,请将重试该任务直到成功或者直接删除该任务!</value>
+  </data>
+  <data name="LimitReached" xml:space="preserve">
+    <value>错误重试已达到上限!</value>
+  </data>
+  <data name="CallbackFail" xml:space="preserve">
+    <value>回调失败</value>
+  </data>
+  <data name="CallbackStart" xml:space="preserve">
+    <value>回调开始</value>
+  </data>
+  <data name="CallbackSuccess" xml:space="preserve">
+    <value>回调成功</value>
+  </data>
+  <data name="GobalSettingButtonName" xml:space="preserve">
+    <value>全局配置</value>
+  </data>
+  <data name="ReplacePlaceHolder" xml:space="preserve">
+    <value>占位符替换</value>
+  </data>
+  <data name="CallbackELExcuteError" xml:space="preserve">
+    <value>回调条件错误</value>
+  </data>
+  <data name="CallbackELExcuteResult" xml:space="preserve">
+    <value>回调条件结果</value>
+  </data>
+  <data name="ExportJobsButtonName" xml:space="preserve">
+    <value>导出任务列表</value>
+  </data>
+  <data name="ImportJobsButtonName" xml:space="preserve">
+    <value>导入任务列表</value>
+  </data>
+  <data name="DingTalkConfig" xml:space="preserve">
+    <value>任务基础属性</value>
+  </data>
+  <data name="DingTalkLogDetail" xml:space="preserve">
+    <value>日志详细</value>
+  </data>
+  <data name="DingTalkRequestUrl" xml:space="preserve">
+    <value>请求地址</value>
+  </data>
+  <data name="DingTalkResponse" xml:space="preserve">
+    <value>执行情况</value>
+  </data>
+  <data name="DingTalkTitle" xml:space="preserve">
+    <value>任务通知</value>
+  </data>
+  <data name="AgentJobCount" xml:space="preserve">
+    <value>作业数量</value>
+  </data>
+  <data name="AgentServer" xml:space="preserve">
+    <value>服务器</value>
+  </data>
+  <data name="AgentServerBeat" xml:space="preserve">
+    <value>心跳</value>
+  </data>
+  <data name="SearchPlaceholderUseName" xml:space="preserve">
+    <value>使用【name:xxx】可筛选作业列</value>
+  </data>
+  <data name="Remind_SelectOneJob" xml:space="preserve">
+    <value>只能选择一个任务</value>
+  </data>
+  <data name="Remind_SelectNoJobAgent" xml:space="preserve">
+    <value>当前选择的任务非JobAgent类型!</value>
+  </data>
+  <data name="SubmitButtonName" xml:space="preserve">
+    <value>提交</value>
+  </data>
+  <data name="CancelButtonName" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Remind_Warning" xml:space="preserve">
+    <value>注意</value>
+  </data>
+  <data name="AgentJobRunDetailButton" xml:space="preserve">
+    <value>您确定要发送获取运行详情指令吗!</value>
+  </data>
+  <data name="Remind_StopBackgroundJob" xml:space="preserve">
+    <value>您确定要发送停止指令吗!</value>
+  </data>
+  <data name="AgentJobRunningParam" xml:space="preserve">
+    <value>可输入本次运行的参数</value>
+  </data>
+  <data name="Remind_StartJob" xml:space="preserve">
+    <value>运行</value>
+  </data>
+  <data name="AgentJobRunningButton" xml:space="preserve">
+    <value>确定要发送运行指令吗?</value>
+  </data>
+  <data name="AgentJobRunningSuccess" xml:space="preserve">
+    <value>运行指令发送成功</value>
+  </data>
+</root>

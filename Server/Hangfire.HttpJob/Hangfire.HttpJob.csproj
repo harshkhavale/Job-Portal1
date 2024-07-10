@@ -1,0 +1,89 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>httpjob for Hangfire(基于hangfire的webjob调度服务)</Description>
+    <PackageProjectUrl>https://github.com/yuzd/Hangfire.HttpJob</PackageProjectUrl>
+    <Version>3.8.5</Version>
+    <Authors>yuzd</Authors>
+    <AssemblyVersion>3.8.5.0</AssemblyVersion>
+    <FileVersion>3.8.5.0</FileVersion>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Content\cron.js" />
+    <None Remove="Content\httpjob.js" />
+    <None Remove="Content\jsoneditor.css" />
+    <None Remove="Content\jsoneditor.js" />
+    <None Remove="Content\sweetalert2.min.css" />
+    <None Remove="Content\sweetalert2.min.js" />
+    <None Include="Dashboard\Heartbeat\Dashboard\css\styles.css" />
+    <None Include="Dashboard\Heartbeat\Dashboard\html\OverviewPage.html" />
+    <None Include="Dashboard\Heartbeat\Dashboard\js\knockout-3.4.2.js" />
+    <None Include="Dashboard\Heartbeat\Dashboard\js\knockout.bindings.orderable.js" />
+    <None Include="Dashboard\Heartbeat\Dashboard\js\numeral.min.js" />
+    <None Include="Dashboard\Heartbeat\Dashboard\js\OverviewPage.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Content\cron.js" />
+    <EmbeddedResource Include="Content\httpjob.js" />
+    <EmbeddedResource Include="Content\jsoneditor.css" />
+    <EmbeddedResource Include="Content\jsoneditor.js" />
+    <EmbeddedResource Include="Content\sweetalert2.min.css" />
+    <EmbeddedResource Include="Content\sweetalert2.min.js" />
+    <EmbeddedResource Include="Dashboard\Heartbeat\Dashboard\css\styles.css" />
+    <EmbeddedResource Include="Dashboard\Heartbeat\Dashboard\html\OverviewPage.html" />
+    <EmbeddedResource Include="Dashboard\Heartbeat\Dashboard\js\knockout-3.4.2.js" />
+    <EmbeddedResource Include="Dashboard\Heartbeat\Dashboard\js\knockout.bindings.orderable.js" />
+    <EmbeddedResource Include="Dashboard\Heartbeat\Dashboard\js\numeral.min.js" />
+    <EmbeddedResource Include="Dashboard\Heartbeat\Dashboard\js\OverviewPage.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FaceIT.Hangfire.Tags" Version="1.8.5" />
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.8.12" />
+    <PackageReference Include="Hangfire.Console" Version="1.4.3" />
+    <PackageReference Include="HttpClientFactory" Version="1.0.5" />
+    <PackageReference Include="MailKit" Version="4.5.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Spring.EL" Version="1.0.5" />
+    <PackageReference Include="System.ComponentModel.Primitives" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Content\resx\Strings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Dashboard\Pages\CronJobsPage.generated.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CronJobsPage.cshtml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Content\resx\Strings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Dashboard\Pages\CronJobsPage.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>CronJobsPage.generated.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Dashboard\Heartbeat" />
+  </ItemGroup>
+
+</Project>
